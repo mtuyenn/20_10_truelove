@@ -1145,24 +1145,24 @@
             if (indexTextContent < textLetterP.length) {
                 textLetterContent.textContent += textLetterP[indexTextContent];
                 indexTextContent++;
-                timeoutTextLetterContent = setTimeout(textCharLetterContent, 50);
+                setTimeout(indexTextContent, 1);
             }
             else {
                 clearInterval(timoutTextLetterContent)
-                setTimeout(typeSignature, 500);
+                // setTimeout(typeSignature, 500);
 
             }
         }
 
-        let indexSignature = 0;
-        function typeSignature() {
-            if (indexSignature < signature.length) {
-                textLetterContent.innerHTML += signature[indexSignature];
-                indexSignature++;
-                setTimeout(typeSignature, 50);
-            }
-        }
-        textCharLetterContent();
+        // let indexSignature = 0;
+        // function typeSignature() {
+        //     if (indexSignature < signature.length) {
+        //         textLetterContent.innerHTML += signature[indexSignature];
+        //         indexSignature++;
+        //         setTimeout(typeSignature, 40);
+        //     }
+        // }
+        // textCharLetterContent();
         
         function funcTimeoutLetterContent() {
             indexTextContent = 0; // Reset indexTextContent
