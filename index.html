@@ -1145,7 +1145,7 @@
             if (indexTextContent < textLetterP.length) {
                 textLetterContent.textContent += textLetterP[indexTextContent];
                 indexTextContent++;
-                setTimeout(indexTextContent, 50);
+                setTimeout(indexTextContent, 1);
             }
             else {
                 clearInterval(timoutTextLetterContent)
@@ -1170,7 +1170,7 @@
             clearInterval(timoutTextLetterContent);
             timoutTextLetterContent = setInterval(() => {
                 textCharLetterContent();
-            }, 100)
+            }, 60)
         }
         $(document).ready(function () {
             $('.valentines').mouseenter(function () {
