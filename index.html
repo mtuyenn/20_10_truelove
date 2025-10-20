@@ -1109,7 +1109,7 @@
         // .textLetter text h2
         let indexText = 0;
         let textLetter = document.querySelector('.textLetter h2');
-        const textLetterH2 = "Gửi Hoàng Khả Ngân!";
+        const textLetterH2 = "Gửi bé iuu của Mtuyen!";
         let timoutTextLetter;
 
         function textCharLetter() {
@@ -1137,19 +1137,33 @@
         // chữ của thư bạn muốn gửi
         let indexTextContent = 0;
         let textLetterContent = document.querySelector('.contentLetter');
-        const textLetterP = "Hôm nay là ngày 20/10 anh chúc em luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống nhá. Hãy luôn giữ mãi nụ cười trên môi nhá và đừng suy nghĩ nhiều về những thứ không đáng nha";
+        const textLetterP = "Hôm nay là ngày 20/10 anh chúc bé Thiên Nhi của anh luôn luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống. Chúc bé sẽ luôn vui vẻ và yêu đời, chúc bé ngày càng thêm dễ thương, xinh đẹp. Anh mong bé luôn luôn yêu đời và yêu anh nữa :>. Chúc em tất cả.";
+        const signature = "<br><br>— <b style='color: crimson;'> mtuyenn </b> —";
+        textLetterContent.innerHTML += signature;
         let timoutTextLetterContent;
         function textCharLetterContent() {
             if (indexTextContent < textLetterP.length) {
                 textLetterContent.textContent += textLetterP[indexTextContent];
                 indexTextContent++;
-                setTimeout(indexTextContent, 1);
+                timeoutTextLetterContent = setTimeout(textCharLetterContent, 50);
             }
             else {
                 clearInterval(timoutTextLetterContent)
+                setTimeout(typeSignature, 500);
 
             }
         }
+
+        let indexSignature = 0;
+        function typeSignature() {
+            if (indexSignature < signature.length) {
+                textLetterContent.innerHTML += signature[indexSignature];
+                indexSignature++;
+                setTimeout(typeSignature, 50);
+            }
+        }
+        textCharLetterContent();
+        
         function funcTimeoutLetterContent() {
             indexTextContent = 0; // Reset indexTextContent
             textLetterContent.textContent = ''; // Xóa nội dung hiện tại của textLetter
